@@ -167,5 +167,84 @@ button.edit:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+        text-align: center;
+    }
+
+    .container {
+        padding: 15px 20px; /* Ajusta o espaçamento interno */
+        max-width: 100%; /* Permite que o container ocupe toda a largura */
+    }
+
+    form input,
+    form button {
+        flex: 1 1 100%; /* Campos e botões ocupam toda a largura */
+        margin-bottom: 10px; /* Espaçamento entre os elementos */
+    }
+
+    table {
+        display: block; /* Torna a tabela um bloco */
+        overflow-x: auto; /* Adiciona rolagem horizontal */
+        white-space: nowrap; /* Evita quebra de texto */
+        font-size: 14px; /* Reduz tamanho da fonte */
+    }
+
+    table th,
+    table td {
+        padding: 8px 10px; /* Ajusta o padding em telas pequenas */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
 }
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .container {
+        padding: 10px 15px; /* Reduz o espaçamento interno */
+    }
+
+    /* Tabela vira cartões */
+    table {
+        display: block; /* Força o layout de bloco */
+        border: 0;
+    }
+
+    table thead {
+        display: none; /* Esconde o cabeçalho da tabela */
+    }
+
+    table tbody tr {
+        display: block; /* Cada linha vira um cartão */
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 10px;
+    }
+
+    table td {
+        display: block; /* Cada célula ocupa uma linha */
+        text-align: right;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    table td::before {
+        content: attr(data-label); /* Adiciona o rótulo do dado */
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        color: #ff8c00;
+    }
+}
+
 
