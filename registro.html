@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Treino - Academia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Registro de Treino</h1>
+        <form id="data-form">
+            <input type="text" id="exercise" placeholder="Exercício Feito" required>
+            <input type="number" id="weight" placeholder="Carga Utilizada (kg)" required>
+            <input type="number" id="series" placeholder="Quantidades de Séries" required>
+            <input type="number" id="reps" placeholder="Repetições por Série" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exercício</th>
+                    <th>Carga (kg)</th>
+                    <th>Séries</th>
+                    <th>Repetições</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- Linhas adicionadas dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
